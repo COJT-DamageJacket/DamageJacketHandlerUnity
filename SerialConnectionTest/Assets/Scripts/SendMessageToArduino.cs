@@ -2,11 +2,10 @@
 
 public class SendMessageToArduino : MonoBehaviour {
 
-    public SerialHandler serialHandler;
+    [SerializeField]public SerialHandler serialHandler;
 
     void Start()
     {
-        serialHandler = new SerialHandler();
         serialHandler.OnDataReceived += OnDataReceived;
     }
 
@@ -15,6 +14,7 @@ public class SendMessageToArduino : MonoBehaviour {
         serialHandler.Write("Hello, Arduino! I'm Unity.");
     }
 
+
     void OnDataReceived(string message)
     {
         string[] data = message.Split(new string[] { "\t" }, System.StringSplitOptions.None);
@@ -22,7 +22,9 @@ public class SendMessageToArduino : MonoBehaviour {
 
         try
         {
-
+            for (int i = 0; i < data.Length; ++i) {
+                Debug.Log("Received Data " + i + " : " + data[i]);
+            }
         }
         catch (System.Exception e)
         {
