@@ -112,11 +112,18 @@ public class SerialHandler : MonoBehaviour
         }
     }
 
-    public void WriteBytes(int data)
+    public void WriteByte(int data)
     {
-        byte[] b = new byte[1];
-        b[0] = (byte)data;
-        serialPort.Write(b, 0, 1);
+        try
+        {
+            byte[] b = new byte[1];
+            b[0] = (byte)data;
+            serialPort.Write(b, 0, 1);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning(e.Message);
+        }
     }
        
 }

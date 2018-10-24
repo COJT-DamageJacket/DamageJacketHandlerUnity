@@ -43,7 +43,7 @@ public class BoxColliderScript : MonoBehaviour {
 
     void SerialSend(int value) {
         Debug.Log("send" + value.ToString());
-        serialHandler.Write(value.ToString());
+        serialHandler.WriteByte((byte)value);
         state = false;
     }
 
