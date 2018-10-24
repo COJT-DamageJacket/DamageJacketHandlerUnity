@@ -14,14 +14,14 @@ public class SerialHandler : MonoBehaviour
     private Thread thread;
     private bool isPortOpen = false;
 
-    private string newMessage;
+    private byte[] data;
     private bool isNewMessageReceived = false;
 
     void Awake()
     {
         // FIXME 環境変数に保存しておいて読み込むようにする（？）
 #if UNITY_STANDALONE_OSX
-        portName = "/dev/tty.usb-hogehoge";
+        portName = "/dev/tty.usbmodem14131";
 #elif UNITY_STANDALONE_LINUX
         portName = "/dev/ttyUSB0"
 #elif UNITY_STANDALONE_WIN
@@ -36,7 +36,7 @@ public class SerialHandler : MonoBehaviour
         if (isNewMessageReceived)
         {
             if (OnDataReceived == null) Debug.LogWarning("SerialHandler.OnDataReceived is null");
-            else OnDataReceived(newMessage);
+            else OnDataReceived(data[0].ToString());
         }
         isNewMessageReceived = false;
     }
@@ -48,15 +48,21 @@ public class SerialHandler : MonoBehaviour
 
     private void Open()
     {
-        /*
-        serialPort = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One);
-        serialPort.Open();
+        try
+        {
+            serialPort = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One);
+            serialPort.Open();
 
-        isPortOpen = true;
+            isPortOpen = true;
 
-        thread = new Thread(Read);
-        thread.Start();
-        */
+            thread = new Thread(Read);
+            thread.Start();
+        }
+        catch (System.Exception e)
+        {
+        Debug.LogWarning(e);
+        }
+
     }
 
     private void Close()
@@ -82,7 +88,9 @@ public class SerialHandler : MonoBehaviour
         {
             try
             {
-                newMessage = serialPort.ReadLine();
+                data = new byte[1];
+                int res = serialPort.Read(data, 0, 1);
+                Debug.Log("serial read : " + res);
                 isNewMessageReceived = true;
             }
             catch (System.Exception e)
@@ -103,4 +111,12 @@ public class SerialHandler : MonoBehaviour
             Debug.LogWarning(e.Message);
         }
     }
+
+    public void WriteBytes(int data)
+    {
+        byte[] b = new byte[1];
+        b[0] = (byte)data;
+        serialPort.Write(b, 0, 1);
+    }
+       
 }
