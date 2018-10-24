@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoxColliderScript : MonoBehaviour {
 
     private bool state;
     Color color;
     [SerializeField] bool send;
-    [SerializeField]BoxColliderScript box;
-    public SerialHandler serialHandler;
+    [SerializeField] BoxColliderScript box;
+    [SerializeField] Toggle withUnityChan;
 
+    public SerialHandler serialHandler;
+    Timer timerColor;
 
     // Use this for initialization
     void Start () {
+        timerColor = new Timer();
+        if (send)
+            timerColor.expire += ResetSend;
+
         state = false;
         if (send) color = Color.blue;
         else color = Color.red;
@@ -23,7 +30,8 @@ public class BoxColliderScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!state) GetComponent<Renderer>().material.color = Color.white;
+        timerColor.UpdateTime(Time.deltaTime);
+
 	}
 
     void OnTriggerEnter (Collider other) {
@@ -31,18 +39,23 @@ public class BoxColliderScript : MonoBehaviour {
         if (state)
         {
             GetComponent<Renderer>().material.color = color;
-            if (box != null) {
-                int value = 0;
-                if (box.state) value = 1;
-                SerialSend(value);
+            if (send)
+            {
+                if (withUnityChan.isOn)
+                {
+                    int value = 0;
+                    if (box.state) value = 1;
+                    SerialSend(value);
+                }
+                timerColor.Start(1.0f);
             }
         }
         else
             GetComponent<Renderer>().material.color = Color.white;
     }
 
-    void SerialSend(int value) {
-        Debug.Log("send" + value.ToString());
+    private void SerialSend(int value) {
+        Debug.Log("send : " + value.ToString());
         serialHandler.WriteByte((byte)value);
         state = false;
     }
@@ -63,5 +76,10 @@ public class BoxColliderScript : MonoBehaviour {
         {
             Debug.LogWarning(e.Message);
         }
+    }
+
+    void ResetSend()
+    {
+        GetComponent<Renderer>().material.color = Color.white;
     }
 }

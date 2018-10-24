@@ -18,7 +18,8 @@ public class SendPanelState : MonoBehaviour {
     [SerializeField] Text valueText;
     [SerializeField] Text receiveText;
     [SerializeField] SerialHandler serialHandler;
-    [SerializeField] 
+    [SerializeField] Toggle withUnityChan;
+
     const int N = 8;
     private GameObject[] panels;
     private int[] masks;
@@ -44,6 +45,10 @@ public class SendPanelState : MonoBehaviour {
             panels[i].GetComponent<Image>().color = Color.white;
             masks[i] = (int)Mathf.Pow(2, i);
         }
+
+        // データの受け取り
+        if (serialHandler != null)
+            serialHandler.OnDataReceived += ReadMessage;
 	}
 
     // Update is called once per frame
@@ -64,7 +69,7 @@ public class SendPanelState : MonoBehaviour {
         }
         valueText.text = state.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!withUnityChan.isOn && Input.GetKeyDown(KeyCode.Space))
         {
             space.GetComponent<Image>().color = Color.blue;
             serialHandler.WriteByte(state);
