@@ -17,11 +17,13 @@ public class SerialHandler : MonoBehaviour
     private byte[] data;
     private bool isNewMessageReceived = false;
 
+    private bool isQuitting;
+
     void Awake()
     {
         // FIXME 環境変数に保存しておいて読み込むようにする（？）
 #if UNITY_STANDALONE_OSX
-        portName = "/dev/tty.usbmodem14111";
+        portName = "/dev/tty.usbmodem14131";
 #elif UNITY_STANDALONE_LINUX
         portName = "/dev/ttyUSB0"
 #elif UNITY_STANDALONE_WIN
@@ -29,6 +31,8 @@ public class SerialHandler : MonoBehaviour
 #endif
         Debug.Log("SerialPort : " + portName);
         Open();
+
+        isQuitting = false;
     }
 
     void Update()
@@ -41,9 +45,15 @@ public class SerialHandler : MonoBehaviour
         isNewMessageReceived = false;
     }
 
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+        Close();
+    }
+
     void OnDestroy()
     {
-        Close();
+        if (!isQuitting) Close();
     }
 
     private void Open()
@@ -60,7 +70,7 @@ public class SerialHandler : MonoBehaviour
         }
         catch (System.Exception e)
         {
-        Debug.LogWarning(e);
+            Debug.LogWarning(e);
         }
 
     }
