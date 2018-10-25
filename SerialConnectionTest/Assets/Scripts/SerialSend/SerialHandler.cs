@@ -21,7 +21,7 @@ public class SerialHandler : MonoBehaviour
     {
         // FIXME 環境変数に保存しておいて読み込むようにする（？）
 #if UNITY_STANDALONE_OSX
-        portName = "/dev/tty.usbmodem14131";
+        portName = "/dev/tty.usbmodem14111";
 #elif UNITY_STANDALONE_LINUX
         portName = "/dev/ttyUSB0"
 #elif UNITY_STANDALONE_WIN

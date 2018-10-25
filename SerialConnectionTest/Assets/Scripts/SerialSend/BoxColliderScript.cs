@@ -11,7 +11,7 @@ public class BoxColliderScript : MonoBehaviour {
     [SerializeField] BoxColliderScript box;
     [SerializeField] Toggle withUnityChan;
 
-    public SerialHandler serialHandler;
+    [SerializeField] public SerialHandler serialHandler;
     Timer timerColor;
 
     // Use this for initialization
@@ -38,16 +38,20 @@ public class BoxColliderScript : MonoBehaviour {
         state = !state;
         if (state)
         {
-            GetComponent<Renderer>().material.color = color;
             if (send)
             {
                 if (withUnityChan.isOn)
                 {
+                    GetComponent<Renderer>().material.color = color;
                     int value = 0;
                     if (box.state) value = 1;
                     SerialSend(value);
                 }
                 timerColor.Start(1.0f);
+            }
+            else
+            {
+                GetComponent<Renderer>().material.color = color;
             }
         }
         else

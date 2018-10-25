@@ -13,7 +13,7 @@ public class SendPanelState : MonoBehaviour {
     [SerializeField] GameObject panel2;
     [SerializeField] GameObject panel1;
     [SerializeField] GameObject panel0;
-    [SerializeField] GameObject space;
+    [SerializeField] GameObject panelSend;
     [SerializeField] Text stateText;
     [SerializeField] Text valueText;
     [SerializeField] Text receiveText;
@@ -69,9 +69,9 @@ public class SendPanelState : MonoBehaviour {
         }
         valueText.text = state.ToString();
 
-        if (!withUnityChan.isOn && Input.GetKeyDown(KeyCode.Space))
+        if (!withUnityChan.isOn && Input.GetKeyDown(KeyCode.X))
         {
-            space.GetComponent<Image>().color = Color.blue;
+            panelSend.GetComponent<Image>().color = Color.blue;
             serialHandler.WriteByte(state);
             stateText.text = "Sending";
             timerSend.Start(1.2f);
@@ -89,7 +89,7 @@ public class SendPanelState : MonoBehaviour {
     private void ResetSending()
     {
         stateText.text = "-";
-        space.GetComponent<Image>().color = Color.white;
+        panelSend.GetComponent<Image>().color = Color.white;
     }
 
     private void ResetReceiving()

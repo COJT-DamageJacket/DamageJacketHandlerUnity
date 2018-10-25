@@ -15,7 +15,7 @@ public class UnityChanJump : MonoBehaviour {
 	void Update () {
         Animator animator = GetComponent<Animator>();   // ...(1)
 
-        if (Input.GetKey(KeyCode.Space))   // ...(2)
+        if (Input.GetKey(KeyCode.X))   // ...(2)
         {
             animator.SetBool("Jump", true);
         }
