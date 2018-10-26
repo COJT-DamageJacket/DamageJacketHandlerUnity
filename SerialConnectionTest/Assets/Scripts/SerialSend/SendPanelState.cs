@@ -64,7 +64,6 @@ public class SendPanelState : MonoBehaviour {
                 else color = Color.white;
                 state ^= masks[i];
                 panels[i].GetComponent<Image>().color = color;
-                Debug.Log(state);
             }
         }
         valueText.text = state.ToString();

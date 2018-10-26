@@ -7,7 +7,7 @@ public class SerialHandler : MonoBehaviour
     public delegate void SerialDataReceivedEventHandler(string message);
     public event SerialDataReceivedEventHandler OnDataReceived = null;
 
-    private string portName = "";
+    [SerializeField] private string portName = "";
     private int baudRate = 9600;
 
     private SerialPort serialPort;
@@ -21,14 +21,16 @@ public class SerialHandler : MonoBehaviour
 
     void Awake()
     {
-        // FIXME 環境変数に保存しておいて読み込むようにする（？）
+        /*
+         * SeaarializedFieldにポート番号を記入する
 #if UNITY_STANDALONE_OSX
-        portName = "/dev/tty.usbmodem14131";
+        portName = "/dev/tty.usbmodem14111";
 #elif UNITY_STANDALONE_LINUX
         portName = "/dev/ttyUSB0"
 #elif UNITY_STANDALONE_WIN
         portName = "COM1";
 #endif
+        */
         Debug.Log("SerialPort : " + portName);
         Open();
 
@@ -129,6 +131,7 @@ public class SerialHandler : MonoBehaviour
             byte[] b = new byte[1];
             b[0] = (byte)data;
             serialPort.Write(b, 0, 1);
+            Debug.Log("send : " + data);
         }
         catch (System.Exception e)
         {
