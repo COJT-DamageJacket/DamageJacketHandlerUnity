@@ -1,6 +1,4 @@
-﻿using System;
-
-public enum Power
+﻿public enum Power
 {
     Stop,
     Weak,

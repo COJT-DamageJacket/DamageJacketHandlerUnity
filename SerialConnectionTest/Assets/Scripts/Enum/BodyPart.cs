@@ -1,9 +1,11 @@
-﻿using System;
-
-public enum BodyPart
+﻿public enum BodyPart
 {
     Shoulder,
     Chest,
+    ChestOut,
+    Stomach,
+    StomachOut,
     Navel,
-    Back
+    Back,
+    Hip
 }
