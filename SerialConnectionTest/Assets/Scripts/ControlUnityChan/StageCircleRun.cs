@@ -47,6 +47,7 @@ public class StageCircleRun : MonoBehaviour {
             Launch();
         }
 
+        theta = (theta+360)%360;
         float r = theta / 180 * Mathf.PI;
         trans.localPosition = new Vector3(Mathf.Cos(r) * RADIUS, 1.5f, -Mathf.Sin(r) * RADIUS);
 

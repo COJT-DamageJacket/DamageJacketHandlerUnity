@@ -8,11 +8,13 @@ public class Bullet : MonoBehaviour {
     const float VELOCITY = 10;
 
     private Timer timer;
+    public float theta;
 
 	// Use this for initialization
 	void Start () {
         timer = new Timer();
         timer.expire += () =>{ Destroy(gameObject); };
+        theta = 0f;
 	}
 
     void Destroy()
@@ -29,6 +31,7 @@ public class Bullet : MonoBehaviour {
     public void SetVelocity(float theta)
     {
         timer.Start(TIMELIMIT);
+        this.theta = theta;
 
         float r = theta / 180 * Mathf.PI;
         GetComponent<Rigidbody>().velocity = new Vector3(-Mathf.Cos(r), 0, Mathf.Sin(r)) * VELOCITY;

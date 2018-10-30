@@ -5,7 +5,7 @@ using UnityEngine;
 public class ElevateStage : MonoBehaviour {
 
     const float DELTA_HEIGHT = 0.1f;
-    const float MAX_HEIGHT = 10f;
+    const float MAX_HEIGHT = 14f;
     const float MIN_HEIGHT = 4f;
 
     public float height;
