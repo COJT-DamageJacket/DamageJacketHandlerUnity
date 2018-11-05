@@ -4,32 +4,53 @@ using UnityEngine;
 
 public class BulletHitTarget : MonoBehaviour {
 
+    [SerializeField] SerialHandler serialHandler;
+    MotorHandler motorHandler;
+
 	// Use this for initialization
 	void Start () {
-		
+        motorHandler = new MotorHandler(16);
+
+        if (serialHandler != null)
+        {
+            serialHandler.OnDataReceived += (string message) => { Debug.Log("receive message : " + message); };
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.D)) // Dキーでリセットする
+        {
+            Debug.Log("Reset Motor State");
+            motorHandler.Reset();
+            serialHandler.WriteBytes(motorHandler.Data);
+        }
 	}
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("angle : " + other.gameObject.GetComponent<Bullet>().theta);
-
-        Vector3 hitPos = new Vector3();
-        foreach (ContactPoint point in other.contacts)
+        if (other.gameObject.tag == "Bullet")
         {
-            hitPos = point.point;
-            Debug.Log("height : " + hitPos.y);
-        }
+            Debug.Log("angle : " + other.gameObject.GetComponent<Bullet>().theta);
 
-        Side side;
-        BodyPart part;
-        (side, part) = CollisionAt(other.gameObject.GetComponent<Bullet>().theta, hitPos.y);
-        Debug.Log(side);
-        Debug.Log(part);
+            Vector3 hitPos = new Vector3();
+            foreach (ContactPoint point in other.contacts)
+            {
+                hitPos = point.point;
+                Debug.Log("height : " + hitPos.y);
+            }
+
+            Side side;
+            BodyPart part;
+            (side, part) = CollisionAt(other.gameObject.GetComponent<Bullet>().theta, hitPos.y);
+            Debug.Log(side);
+            Debug.Log(part);
+
+            motorHandler.Activate(side, part, Power.Strong);
+            serialHandler.WriteBytes(motorHandler.Data);
+
+            Destroy(other.gameObject);
+        }
     }
 
     (Side, BodyPart) CollisionAt(float theta, float height)

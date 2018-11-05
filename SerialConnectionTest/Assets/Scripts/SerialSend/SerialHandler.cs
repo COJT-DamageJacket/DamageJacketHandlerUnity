@@ -49,6 +49,7 @@ public class SerialHandler : MonoBehaviour
 
     void OnApplicationQuit()
     {
+        Debug.Log("On Application Quit");
         isQuitting = true;
         Close();
     }
@@ -96,6 +97,8 @@ public class SerialHandler : MonoBehaviour
 
     private void Read()
     {
+        // TODO Readメソッドは.NET 4.6だとフリーズを招くので、ReadLineを使う
+        /*
         while (isPortOpen && serialPort != null && serialPort.IsOpen)
         {
             try
@@ -110,6 +113,7 @@ public class SerialHandler : MonoBehaviour
                 Debug.LogWarning(e.Message);
             }
         }
+        */
     }
 
     public void Write(string message)
@@ -131,6 +135,19 @@ public class SerialHandler : MonoBehaviour
             byte[] b = new byte[1];
             b[0] = (byte)data;
             serialPort.Write(b, 0, 1);
+            Debug.Log("send : " + data);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning(e.Message);
+        }
+    }
+
+    public void WriteBytes(byte[] data)
+    {
+        try
+        {
+            serialPort.Write(data, 0, data.Length);
             Debug.Log("send : " + data);
         }
         catch (System.Exception e)
