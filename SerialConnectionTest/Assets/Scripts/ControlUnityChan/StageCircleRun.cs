@@ -64,9 +64,6 @@ public class StageCircleRun : MonoBehaviour {
             pos.y = pos.y*1.06f + 0.5f;
             GameObject prefab = (GameObject)Resources.Load("Prefabs/Bullet");
             GameObject bullet = Instantiate(prefab, pos, Quaternion.identity);
-            launchTimer = new Timer();
-            launchTimer.expire += () => { bullet.GetComponent<Bullet>().SetVelocity(theta); launchTimer = null; };
-            launchTimer.Start(0.1f);
         }
     }
 
