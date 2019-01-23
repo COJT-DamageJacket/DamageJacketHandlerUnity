@@ -9,35 +9,43 @@ public class UnityChanShooter : MonoBehaviour {
 
     private Transform trans;
     public float theta;
+    public int hp;
 
     private Timer launchTimer;
 
     // Use this for initialization
     void Start () {
         trans = transform;
+        hp = 100; // TODO : 定数を扱うクラスをつくる
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        int y = (int)Input.GetAxis("Vertical 1");
+        int x = (int)Input.GetAxis("Horizontal 1");
+        if (Input.GetKey(KeyCode.LeftArrow) || x == -1)
         {
             theta -= DELTA_THETA;
             trans.rotation = Quaternion.AngleAxis(theta, new Vector3(0, 1, 0));
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || x == 1)
         {
             theta += DELTA_THETA;
             trans.rotation = Quaternion.AngleAxis(theta, new Vector3(0, 1, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick2Button0))
         {
             Launch();
         }
 
         if (launchTimer != null)
             launchTimer.UpdateTime(Time.deltaTime);
+
+
+        Debug.Log("Joycon");
+        Debug.Log(x + " " + y);
     }
 
     void Launch()

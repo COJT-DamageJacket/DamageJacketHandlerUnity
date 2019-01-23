@@ -294,6 +294,7 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/DemoGameSystem.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Locomotion/Scripts/Locomotion.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/JoystickToEvents.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/LocomotionPlayer.cs"
