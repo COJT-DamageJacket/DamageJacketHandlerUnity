@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnityChanShooter : MonoBehaviour {
 
     const float DELTA_THETA = 3f;
-    const float BULLETHEIGHT = 1f;
+    const float BULLET_HEIGHT = 1f;
 
     private Transform trans;
     public float theta;
@@ -44,12 +44,12 @@ public class UnityChanShooter : MonoBehaviour {
     {
         if (launchTimer == null)
         {
-            Vector3 pos = new Vector3(0, BULLETHEIGHT, 0);
+            Vector3 pos = new Vector3(0, BULLET_HEIGHT, 0);
             GameObject prefab = (GameObject)Resources.Load("Prefabs/Bullet");
             GameObject bullet = Instantiate(prefab, pos, Quaternion.identity);
 
             launchTimer = new Timer();
-            launchTimer.expire += () => { Debug.Log("expire"); bullet.GetComponent<Bullet>().SetVelocity(theta+90); launchTimer = null; };
+            launchTimer.expire += () => { bullet.GetComponent<Bullet>().SetVelocity(theta+90); launchTimer = null; };
             launchTimer.Start(0.1f);
         }
     }

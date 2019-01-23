@@ -8,6 +8,7 @@ public class Timer
     private float LIMIT;
     private float time;
     private bool isRunning;
+    private int state;
 
     public Timer()
     {
@@ -45,5 +46,9 @@ public class Timer
     public void Stop()
     {
         isRunning = false;
+    }
+
+    public void ExpiredReset() {
+        expire = null;
     }
 }

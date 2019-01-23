@@ -7,13 +7,13 @@ public class Bullet : MonoBehaviour {
     const float TIMELIMIT = 1.2f;
     const float VELOCITY = 10;
 
-    private Timer timer;
+    public Timer timer;
     public float theta;
 
 	// Use this for initialization
 	void Start () {
         timer = new Timer();
-        timer.expire += () =>{ Destroy(gameObject); };
+        timer.expire += () => { Destroy(gameObject); };
         theta = 0f;
 	}
 

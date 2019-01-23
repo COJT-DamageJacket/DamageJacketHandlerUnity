@@ -294,7 +294,6 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/CameraShooterController.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Locomotion/Scripts/Locomotion.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/JoystickToEvents.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/LocomotionPlayer.cs"
@@ -306,16 +305,21 @@
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/SABoneColliderChild.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/SAMeshCollider.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/SAMeshColliderBuilder.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/CameraShooterController.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/StageCircleRun.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/StageUnityChanFollowCamera.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/UnityChanJump.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/UnityChanMove.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/ControlUnityChan/UnityChanShooter.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/BodyPart.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/Power.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/Side.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/EnemyGenerator.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/miniUniZombi.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/Bullet.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/BulletHitTarget.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/ElevateStage.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/EnemyBullet.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Jacket/ColliderUpdater.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/BoxColliderScript.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/SendPanelState.cs"
@@ -337,5 +341,4 @@
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChan/Scripts/ThirdPersonCamera.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChan/SplashScreen/Scripts/SplashScreen.cs"
--i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChanShooter.cs"
 -v:0

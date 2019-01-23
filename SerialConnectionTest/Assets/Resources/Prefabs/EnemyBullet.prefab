@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1267092470905820}
+  m_RootGameObject: {fileID: 1312789373957458}
   m_IsPrefabAsset: 1
---- !u!1 &1267092470905820
+--- !u!1 &1312789373957458
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4669433975306754}
-  - component: {fileID: 33177045145833838}
-  - component: {fileID: 23141415262348748}
-  - component: {fileID: 114980961495142890}
-  - component: {fileID: 54761501899357490}
-  - component: {fileID: 135881269548875494}
+  - component: {fileID: 4965366163029436}
+  - component: {fileID: 33471676965140442}
+  - component: {fileID: 23597016543114968}
+  - component: {fileID: 135877354112518466}
+  - component: {fileID: 114229442380717794}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Bullet
+  m_Name: EnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4669433975306754
+--- !u!4 &4965366163029436
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.4, y: -8.5, z: 0}
+  m_GameObject: {fileID: 1312789373957458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.8949914, y: 13.51, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23141415262348748
+--- !u!23 &23597016543114968
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
+  m_GameObject: {fileID: 1312789373957458}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 9d32c7bd9170748ebb84b4c05b81da02, type: 2}
+  - {fileID: 2100000, guid: d765d0c181e0d4302a50a5b093aa0904, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,48 +78,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33177045145833838
+--- !u!33 &33471676965140442
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
+  m_GameObject: {fileID: 1312789373957458}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54761501899357490
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &114980961495142890
+--- !u!114 &114229442380717794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
+  m_GameObject: {fileID: 1312789373957458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ec06a1f8182f4cc8ab4bf2c77c0da50, type: 3}
+  m_Script: {fileID: 11500000, guid: a0c6ddc4105ad4cd6957cc5d4a986662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theta: 0
---- !u!135 &135881269548875494
+--- !u!135 &135877354112518466
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267092470905820}
+  m_GameObject: {fileID: 1312789373957458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
