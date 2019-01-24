@@ -18,6 +18,7 @@ public class DemoGameSystem : MonoBehaviour {
 
     private int score;
     private int hp;
+    private bool isGameOver;
 
     private PointManager pointManager;
 
@@ -27,6 +28,7 @@ public class DemoGameSystem : MonoBehaviour {
         score = INITIAL_SCORE;
         hpGage.maxValue = INITIAL_HP;
         hpGage.minValue = 0;
+        isGameOver = false;
 
         pointManager = GetComponent<PointManager>();
         gameOverText.gameObject.SetActive(false);
@@ -42,8 +44,14 @@ public class DemoGameSystem : MonoBehaviour {
         if (hp == 0) {
             gameOverText.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);
+            isGameOver = true;
         }
-	}
+
+        if (Input.GetKeyDown(KeyCode.Joystick2Button1) && isGameOver)
+        {
+            ResetGame();
+        }
+    }
 
     public void ResetGame() {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
