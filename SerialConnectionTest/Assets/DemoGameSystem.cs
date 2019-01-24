@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DemoGameSystem : MonoBehaviour {
 
     [SerializeField] Text scoreText;
     [SerializeField] Text hpText;
+    [SerializeField] Text gameOverText;
+    [SerializeField] Button restartButton;
     [SerializeField] Slider hpGage;
     [SerializeField] UnityChanShooter shooter;
 
@@ -26,12 +29,24 @@ public class DemoGameSystem : MonoBehaviour {
         hpGage.minValue = 0;
 
         pointManager = GetComponent<PointManager>();
+        gameOverText.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
+        restartButton.onClick.AddListener(ResetGame);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        hpGage.value = hp = shooter.hp;
+        hpGage.value = hp = shooter.getHp();
         hpText.text = hp.ToString();
         scoreText.text = pointManager.get().ToString();
+        if (hp == 0) {
+            gameOverText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+        }
 	}
+
+    public void ResetGame() {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneIndex);
+    }
 }

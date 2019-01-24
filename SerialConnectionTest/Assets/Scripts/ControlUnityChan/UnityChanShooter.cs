@@ -9,7 +9,7 @@ public class UnityChanShooter : MonoBehaviour {
 
     private Transform trans;
     public float theta;
-    public int hp;
+    private int hp;
 
     private Timer launchTimer;
 
@@ -35,7 +35,7 @@ public class UnityChanShooter : MonoBehaviour {
             trans.rotation = Quaternion.AngleAxis(theta, new Vector3(0, 1, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick2Button0))
+        if (hp > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick2Button0)))
         {
             Launch();
         }
@@ -67,5 +67,15 @@ public class UnityChanShooter : MonoBehaviour {
             launchTimer.expire += () => { bullet.GetComponent<Bullet>().SetVelocity(theta+90); launchTimer = null; };
             launchTimer.Start(0.1f);
         }
+    }
+
+    public void damage(int d)
+    {
+        hp = Mathf.Max(0, hp - d);
+    }
+
+    public int getHp()
+    {
+        return hp;
     }
 }
