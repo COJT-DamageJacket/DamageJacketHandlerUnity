@@ -298,6 +298,7 @@
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Locomotion/Scripts/Locomotion.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/JoystickToEvents.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/LocomotionPlayer.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/PointManager.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SABoneColliderCommon.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SAColliderBuilderCommon.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SAMeshColliderCommon.cs"

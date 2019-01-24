@@ -90,15 +90,32 @@ public class miniUniZombi : MonoBehaviour {
 
         timer.UpdateTime(Time.deltaTime);
         if (launchTimer != null)
-            launchTimer.UpdateTime(Time.deltaTime);
+        {
+            try
+            {
+                launchTimer.UpdateTime(Time.deltaTime);
+            }
+            catch
+            {
+                Debug.Log("zombi unity chan launch timer was null");
+            }
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
         {
+            PointManager pointManager = GameObject.Find("DemoGameSystem").GetComponent<PointManager>();
+            pointManager.add(100);
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        launchTimer = null;
     }
 }

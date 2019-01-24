@@ -16,18 +16,22 @@ public class DemoGameSystem : MonoBehaviour {
     private int score;
     private int hp;
 
+    private PointManager pointManager;
+
 	// Use this for initialization
 	void Start () {
         hp = INITIAL_HP;
         score = INITIAL_SCORE;
         hpGage.maxValue = INITIAL_HP;
         hpGage.minValue = 0;
+
+        pointManager = GetComponent<PointManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         hpGage.value = hp = shooter.hp;
         hpText.text = hp.ToString();
-        scoreText.text = score.ToString();
+        scoreText.text = pointManager.get().ToString();
 	}
 }

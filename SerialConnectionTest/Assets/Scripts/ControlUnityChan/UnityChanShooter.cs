@@ -40,12 +40,19 @@ public class UnityChanShooter : MonoBehaviour {
             Launch();
         }
 
+        Debug.Log("unity chan shooter");
         if (launchTimer != null)
-            launchTimer.UpdateTime(Time.deltaTime);
-
-
-        Debug.Log("Joycon");
-        Debug.Log(x + " " + y);
+        {
+            try
+            {
+                launchTimer.UpdateTime(Time.deltaTime);
+            }
+            catch
+            {
+                Debug.Log("unity chan shooter launch timer was null");
+                launchTimer = null;
+            }
+        }
     }
 
     void Launch()

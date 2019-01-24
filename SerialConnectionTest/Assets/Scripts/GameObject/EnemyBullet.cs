@@ -9,7 +9,12 @@ public class EnemyBullet : Bullet {
         if (other.gameObject.tag == "UnityChan")
         {
             Destroy(this.gameObject);
-            other.GetComponent<UnityChanShooter>().hp -= 8; // TODO : 定数
+            other.GetComponent<UnityChanShooter>().hp -= 8; // TODO :
+        }
+        else if (other.gameObject.tag == "Bullet")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
