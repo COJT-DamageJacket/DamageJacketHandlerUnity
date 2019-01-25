@@ -10,7 +10,8 @@ public class MakePattern : MonoBehaviour {
     bool state;
     Timer sampleTimer;
     int counter;
-    int[] pattern;
+    int[] patternArray;
+    Pattern pattern;
 
     [SerializeField] PannelArray pannelArray;
     [SerializeField] DirectionPanel directionPanel;
@@ -21,112 +22,37 @@ public class MakePattern : MonoBehaviour {
     [SerializeField] InputField patternNameField;
     [SerializeField] Button searchButton;
 
-    IDictionary<string, int[]> patternMap;
 
     // Use this for initialization
     void Start () {
+        pattern = new Pattern();
         sampleState = 0;
         sampleTimer = new Timer();
 
         testButton.onClick.AddListener(() =>
         {
-            if (sampleState == 0 && pattern != null)
-                damageSerialSend.SendDamage(directionPanel.direction, pattern);
+            if (sampleState == 0 && patternArray != null)
+                damageSerialSend.SendDamage(directionPanel.direction, patternArray);
         });
 
         saveButton.onClick.AddListener(() =>
         {
-            if (sampleState == 0 && pattern != null) {
-                SavePattern();
+            if (sampleState == 0 && patternArray != null) {
+                string key = patternNameField.text.Replace(" ", "");
+                pattern.SavePattern(key, patternArray);
             }
         });
 
         searchButton.onClick.AddListener(() =>
         {
             string key = patternNameField.text;
-            if (sampleState == 0 && patternMap.ContainsKey(key)) {
-                pattern = patternMap[key];
-                pannelArray.SetPattern(pattern);
+            if (sampleState == 0) {
+                patternArray = pattern.Get(key);
+                pannelArray.SetPattern(patternArray);
             }
         });
-
-        LoadPattern();
 	}
 
-    int[] ConvertPattern(string p) {
-        int[] res = new int[Pattern.RANGE];
-        for (int k = 0; k < Pattern.RANGE/4; k++) {
-            char c = p[k];
-            int v;
-            if (c >= '0' && c <= '9') v = c - '0';
-            else v = c - 'a' + 10;
-            for (int i = 0; i < 4; i++) {
-                res[k * 4 + i] = (c >> (3-i)) & 1;
-            }
-        }
-        return res;
-    }
-
-    string ConvertPattern(int[] p) {
-        string res = "";
-        for (int k = 0; k < Pattern.RANGE/4; k++) {
-            char v = (char)0;
-            for (int i = 0; i < 4; i++) {
-                v <<= 1;
-                v += (char)p[4 * k + i];
-            }
-            char c;
-            if (v >= 10) c = (char)('a' - 10 + v);
-            else c = (char)('0' + v);
-            res += c;
-        }
-        return res;
-    }
-
-    void LoadPattern() {
-        patternMap = new Dictionary<string, int[]>();
-        try
-        {
-            using (var sr = new System.IO.StreamReader(@"Assets/Resources/pattern.csv"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    var line = sr.ReadLine();
-                    var values = line.Split(',');
-                    Debug.Log(values[1]);
-                    PrintPattern(ConvertPattern(values[1]));
-                    Debug.Log(ConvertPattern(ConvertPattern(values[1])));
-                    patternMap.Add(values[0], ConvertPattern(values[1]));
-                    foreach (var value in values)
-                    {
-                        Debug.Log(value);
-                    }
-                }
-            }
-        }
-        catch (System.Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-    }
-
-    void WritePattern()
-    {
-        try
-        {
-            using (var sw = new System.IO.StreamWriter(@"Assets/Resources/pattern.csv"))
-            {
-                foreach (string key in patternMap.Keys) 
-                {
-                    sw.WriteLine(key + "," + ConvertPattern(patternMap[key]));
-                }
-            }
-        }
-        catch (System.Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-    }
 
     // Update is called once per frame
     void Update () {
@@ -136,6 +62,8 @@ public class MakePattern : MonoBehaviour {
         }
         if (sampleState == 2) {
             statePanel.color = (state) ? Color.cyan :Color.white;
+        } else if (sampleState == 0){
+            statePanel.color = new Color(1, 1, 1, 0.5f);
         }
 
         sampleTimer.UpdateTime(Time.deltaTime);
@@ -149,7 +77,7 @@ public class MakePattern : MonoBehaviour {
             return;
         } else if (sampleState == 1) {
             sampleState = 2;
-            pattern = new int[Pattern.RANGE];
+            patternArray = new int[Pattern.RANGE];
             counter = 0;
             sampleTimer.ExpiredReset();
             sampleTimer.expire += GetData;
@@ -160,8 +88,8 @@ public class MakePattern : MonoBehaviour {
     }
 
     void GetData () {
-        pattern[counter] = state ? 1 : 0;
-        pannelArray.SetPattern(counter, pattern[counter]);
+        patternArray[counter] = state ? 1 : 0;
+        pannelArray.SetPattern(counter, patternArray[counter]);
         counter++;
         if (counter == Pattern.RANGE) {
             PrintPattern();
@@ -176,7 +104,7 @@ public class MakePattern : MonoBehaviour {
         string res = "";
         for (int i = 0; i < Pattern.RANGE; i++)
         {
-            res += pattern[i];
+            res += patternArray[i];
         }
         Debug.Log(res);
     }
@@ -191,14 +119,4 @@ public class MakePattern : MonoBehaviour {
         Debug.Log(res);
     }
 
-    void SavePattern() {
-        string key = patternNameField.text.Replace(" ", ""); ;
-        if (key == "")
-            key = "hogehogepoon";
-        if (patternMap.ContainsKey(key))
-            patternMap[key] = pattern;
-        else
-            patternMap.Add(key, pattern);
-        WritePattern();
-    }
 }
