@@ -6,11 +6,12 @@ public class DamageSerialSend : MonoBehaviour {
 
     [SerializeField] SerialHandler serialHandler;
 
-    const byte FRONT = 0b00000011; // 0, 1
-    const byte RIGHT = 0b00000110; // 1, 2
-    const byte BACK  = 0b00001100; // 2, 3
-    const byte LEFT  = 0b00001001; // 3, 0
+    const byte FRONT = 0b00000101; // 0, 1
+    const byte RIGHT = 0b00001100; // 1, 2
+    const byte BACK  = 0b00001010; // 2, 3
+    const byte LEFT  = 0b00000011; // 3, 0
     const byte DEAD  = 0b00010000; // 4
+
     readonly byte[] DIRECTION = { FRONT, RIGHT, BACK, LEFT };
     private int position = 0;
     private int[] pattern;
@@ -66,7 +67,6 @@ public class DamageSerialSend : MonoBehaviour {
     {
         if (!hasSend)
         {
-            position = 0;
             patternIndex = 0;
             pattern = patterns[patternIndex];
             sendIndex = 0;
