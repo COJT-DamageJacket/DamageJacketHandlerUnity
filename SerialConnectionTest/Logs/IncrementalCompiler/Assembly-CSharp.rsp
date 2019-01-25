@@ -294,7 +294,6 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/DamageSerialSend.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Locomotion/Scripts/Locomotion.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/JoystickToEvents.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/LocomotionPlayer.cs"
@@ -324,11 +323,17 @@
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/ElevateStage.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/EnemyBullet.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Jacket/ColliderUpdater.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/PatternControl/DirectionPanel.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/PatternControl/MakePattern.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/PatternControl/NewBehaviourScript.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/PatternControl/PannelArray.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/BoxColliderScript.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/DamageSerialSend.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/SendPanelState.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/SerialSend/SerialHandler.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Shader/GlobeController.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Utils/MotorHandler.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Utils/Pattern.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Utils/Timer.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChan/Scripts/AutoBlink.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/UnityChan/Scripts/AutoBlinkforSD.cs"

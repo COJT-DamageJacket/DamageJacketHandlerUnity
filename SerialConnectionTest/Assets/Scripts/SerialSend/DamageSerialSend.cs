@@ -17,13 +17,10 @@ public class DamageSerialSend : MonoBehaviour {
     private int[] pattern;
 
     private int[][] patterns;
-    const float INTERVAL = 0.1f;
 
     Timer sendTimer;
 
     private int sendIndex;
-    const int SEND_RANGE = 16;
-
     private bool hasSend; // テスト用に一回しか送れない
 
     // Use this for initialization
@@ -53,17 +50,17 @@ public class DamageSerialSend : MonoBehaviour {
     private void readPattern() {
         // TODO : csvかなんかで形式を決めてパターンを作る
         patterns = new int[1][];
-        patterns[0] = new int[SEND_RANGE];
-        for (int i = 0; i < SEND_RANGE; i++) {
+        patterns[0] = new int[Pattern.RANGE];
+        for (int i = 0; i < Pattern.RANGE; i++) {
             if ((i/4&1) == 0) patterns[0][i] = 1;
         }
     }
 
-    public void deadDamage() {
+    public void DeadDamage() {
         serialHandler.WriteByte(DEAD);
     }
 
-    public void sendDamage(int position, int patternIndex)
+    public void SendDamage(int position, int patternIndex)
     {
         if (!hasSend)
         {
@@ -77,12 +74,25 @@ public class DamageSerialSend : MonoBehaviour {
         }
     }
 
+    public void SendDamage(int position, int[] pattern)
+    {
+        if (!hasSend)
+        {
+            this.pattern = pattern;
+            this.position = position;
+
+            sendIndex = 0;
+            hasSend = true;
+            _send();
+        }
+    }
+
     private void _send() {
         serialHandler.WriteByte(pattern[sendIndex] * DIRECTION[position]);
         sendIndex++;
 
         sendTimer.ExpiredReset();
-        if (sendIndex == SEND_RANGE)
+        if (sendIndex == Pattern.RANGE)
         {
             // hasSend = false;
             sendTimer.expire += () =>
@@ -97,6 +107,6 @@ public class DamageSerialSend : MonoBehaviour {
                 _send();
             };
         }
-        sendTimer.Start(INTERVAL);
+        sendTimer.Start(Pattern.INTERVAL);
     }
 }

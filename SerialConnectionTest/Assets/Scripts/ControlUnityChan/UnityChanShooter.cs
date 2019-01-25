@@ -78,12 +78,12 @@ public class UnityChanShooter : MonoBehaviour {
         if (hp > 0 && Mathf.Max(0, hp - d) == 0)
         {
             hp = 0;
-            damageSerialSend.deadDamage();
+            damageSerialSend.DeadDamage();
         }
         else if (hp > d)
         {
             hp -= d;
-            damageSerialSend.sendDamage(pos, 0);
+            damageSerialSend.SendDamage(pos, 0);
         }
     }
 
