@@ -135,7 +135,7 @@ public class SerialHandler : MonoBehaviour
             byte[] b = new byte[1];
             b[0] = (byte)data;
             serialPort.Write(b, 0, 1);
-            // Debug.Log("send : " + data);
+            Debug.Log("send : " + data);
         }
         catch (System.Exception e)
         {

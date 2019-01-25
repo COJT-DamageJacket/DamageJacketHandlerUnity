@@ -1529,3 +1529,71 @@
  (0,0): [01/25/2019 11:13:14.068 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
  (0,0): [01/25/2019 11:13:14.083 午後] Assembly-CSharp-Editor.dll compilation finished in 180ms  source files re-parsed: 0 metadata reloaded: 1
  (0,0): [01/25/2019 11:13:14.094 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:19:19.253 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:19:19.387 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:19:19.401 午後] Assembly-CSharp.dll compilation finished in 148ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:19:19.412 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:19:30.547 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:19:30.654 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:19:30.669 午後] Assembly-CSharp.dll compilation finished in 122ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:19:30.681 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:19:31.450 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:19:31.633 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:19:31.650 午後] Assembly-CSharp-Editor.dll compilation finished in 199ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:19:31.660 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:20:03.232 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:20:03.339 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:20:03.355 午後] Assembly-CSharp.dll compilation finished in 123ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:20:03.367 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:20:03.751 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:20:03.974 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:20:03.990 午後] Assembly-CSharp-Editor.dll compilation finished in 239ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:20:04.001 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:20:56.085 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:20:56.184 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:20:56.198 午後] Assembly-CSharp.dll compilation finished in 113ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:20:56.209 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:20:56.578 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:20:56.726 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:20:56.740 午後] Assembly-CSharp-Editor.dll compilation finished in 161ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:20:56.751 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:21:17.365 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:21:17.458 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:21:17.473 午後] Assembly-CSharp.dll compilation finished in 108ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:21:17.484 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:21:18.001 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:21:18.164 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:21:18.179 午後] Assembly-CSharp-Editor.dll compilation finished in 178ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:21:18.191 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:22:51.253 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:22:51.354 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:22:51.368 午後] Assembly-CSharp.dll compilation finished in 115ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:22:51.379 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:22:51.775 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:22:51.924 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:22:51.940 午後] Assembly-CSharp-Editor.dll compilation finished in 165ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:22:51.951 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:25:24.616 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:25:24.726 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:25:24.741 午後] Assembly-CSharp.dll compilation finished in 124ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:25:24.753 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:25:25.143 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:25:25.288 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:25:25.303 午後] Assembly-CSharp-Editor.dll compilation finished in 159ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:25:25.313 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:28:16.044 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:28:16.219 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:28:16.236 午後] Assembly-CSharp.dll compilation finished in 191ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:28:16.247 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:28:16.863 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:28:17.049 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:28:17.065 午後] Assembly-CSharp-Editor.dll compilation finished in 201ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:28:17.076 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:29:45.886 午後] Assembly-CSharp.dll compiling...
+ (0,0): [01/25/2019 11:29:46.007 午後] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [01/25/2019 11:29:46.022 午後] Assembly-CSharp.dll compilation finished in 136ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [01/25/2019 11:29:46.033 午後] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [01/25/2019 11:29:46.509 午後] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [01/25/2019 11:29:46.680 午後] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [01/25/2019 11:29:46.696 午後] Assembly-CSharp-Editor.dll compilation finished in 187ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [01/25/2019 11:29:46.707 午後] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.

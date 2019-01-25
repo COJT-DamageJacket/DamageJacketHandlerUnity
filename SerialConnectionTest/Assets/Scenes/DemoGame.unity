@@ -1513,6 +1513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theta: 0
   damageSerialSend: {fileID: 1612663321}
+  key: case1
 --- !u!54 &2099044302
 Rigidbody:
   m_ObjectHideFlags: 0

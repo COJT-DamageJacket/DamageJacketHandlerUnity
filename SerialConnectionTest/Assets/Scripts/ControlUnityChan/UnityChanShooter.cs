@@ -13,6 +13,7 @@ public class UnityChanShooter : MonoBehaviour {
 
     private Timer launchTimer;
     [SerializeField] private DamageSerialSend damageSerialSend;
+    [SerializeField] string key;
 
     // Use this for initialization
     void Start () {
@@ -83,7 +84,7 @@ public class UnityChanShooter : MonoBehaviour {
         else if (hp > d)
         {
             hp -= d;
-            damageSerialSend.SendDamage(pos, 0);
+            damageSerialSend.SendDamage(pos, key);
         }
     }
 

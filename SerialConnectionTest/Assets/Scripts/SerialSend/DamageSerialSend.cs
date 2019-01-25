@@ -10,29 +10,31 @@ public class DamageSerialSend : MonoBehaviour {
     const byte RIGHT = 0b00001100; // 1, 2
     const byte BACK  = 0b00001010; // 2, 3
     const byte LEFT  = 0b00000011; // 3, 0
+    const byte ALL = FRONT | RIGHT | BACK | LEFT;
     const byte DEAD  = 0b00010000; // 4
 
-    readonly byte[] DIRECTION = { FRONT, RIGHT, BACK, LEFT };
-    private int position = 0;
-    private int[] pattern;
+    Pattern pattern;
 
-    private int[][] patterns;
+    readonly byte[] DIRECTION = { FRONT, RIGHT, BACK, LEFT, ALL };
+    private int position = 0;
+    private int[] patternArray;
 
     Timer sendTimer;
 
     private int sendIndex;
-    private bool hasSend; // テスト用に一回しか送れない
+    private bool isSending;
 
     // Use this for initialization
     void Start () {
+        pattern = new Pattern();
+
         if (serialHandler != null)
             serialHandler.OnDataReceived += ReadMessage;
 
         sendTimer = new Timer();
         sendIndex = -1;
-        readPattern();
 
-        hasSend = false;
+        isSending = false;
     }
 
 	// Update is called once per frame
@@ -47,48 +49,39 @@ public class DamageSerialSend : MonoBehaviour {
         Debug.Log("Received message : " + message);
     }
 
-    private void readPattern() {
-        // TODO : csvかなんかで形式を決めてパターンを作る
-        patterns = new int[1][];
-        patterns[0] = new int[Pattern.RANGE];
-        for (int i = 0; i < Pattern.RANGE; i++) {
-            if ((i/4&1) == 0) patterns[0][i] = 1;
-        }
-    }
-
     public void DeadDamage() {
         serialHandler.WriteByte(DEAD);
     }
 
-    public void SendDamage(int position, int patternIndex)
+    public void SendDamage(int position, int[] pattern)
     {
-        if (!hasSend)
+        if (!isSending)
         {
-            patternIndex = 0;
-            pattern = patterns[patternIndex];
-            sendIndex = 0;
+            this.patternArray = pattern;
             this.position = position;
 
-            hasSend = true;
+            sendIndex = 0;
+            isSending = true;
             _send();
         }
     }
 
-    public void SendDamage(int position, int[] pattern)
+    public void SendDamage(int position, string key)
     {
-        if (!hasSend)
+        if (!isSending)
         {
-            this.pattern = pattern;
+            Debug.Log(key);
             this.position = position;
-
+            this.patternArray = pattern.Get(key);
             sendIndex = 0;
-            hasSend = true;
+            isSending = true;
             _send();
         }
     }
 
     private void _send() {
-        serialHandler.WriteByte(pattern[sendIndex] * DIRECTION[position]);
+        Debug.Log(patternArray[sendIndex] * DIRECTION[position]);
+        serialHandler.WriteByte(patternArray[sendIndex] * DIRECTION[position]);
         sendIndex++;
 
         sendTimer.ExpiredReset();
@@ -98,6 +91,7 @@ public class DamageSerialSend : MonoBehaviour {
             sendTimer.expire += () =>
             {
                 serialHandler.WriteByte(0);
+                isSending = false;
             };
         }
         else
