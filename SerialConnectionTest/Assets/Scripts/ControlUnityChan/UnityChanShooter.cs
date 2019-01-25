@@ -12,6 +12,7 @@ public class UnityChanShooter : MonoBehaviour {
     private int hp;
 
     private Timer launchTimer;
+    [SerializeField] private DamageSerialSend damageSerialSend;
 
     // Use this for initialization
     void Start () {
@@ -40,7 +41,6 @@ public class UnityChanShooter : MonoBehaviour {
             Launch();
         }
 
-        Debug.Log("unity chan shooter");
         if (launchTimer != null)
         {
             try
@@ -72,6 +72,7 @@ public class UnityChanShooter : MonoBehaviour {
     public void damage(int d)
     {
         hp = Mathf.Max(0, hp - d);
+        damageSerialSend.sendDamage(0, 0);
     }
 
     public int getHp()

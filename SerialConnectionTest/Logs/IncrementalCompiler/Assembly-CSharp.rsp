@@ -294,11 +294,10 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/DemoGameSystem.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/DamageSerialSend.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Locomotion/Scripts/Locomotion.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/JoystickToEvents.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Locomotion Setup/Scripts/LocomotionPlayer.cs"
--i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/PointManager.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SABoneColliderCommon.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SAColliderBuilderCommon.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/SAColliderBuilder/Scripts/Internal/SAMeshColliderCommon.cs"
@@ -316,8 +315,10 @@
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/BodyPart.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/Power.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/Enum/Side.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/DemoGameSystem.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/EnemyGenerator.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/miniUniZombi.cs"
+-i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameController/PointManager.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/Bullet.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/BulletHitTarget.cs"
 -i:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Assets/Scripts/GameObject/ElevateStage.cs"
