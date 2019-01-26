@@ -12,10 +12,16 @@ public class MakePattern : MonoBehaviour {
     int counter;
     int[] patternArray;
     Pattern pattern;
+    string[] STATE_PANEL_MESSAGE = new string[3] {
+        "スペースを押すと記録準備",
+        "スペースを押すと記録開始",
+        "スペースを押すともう一度記録"
+    };
 
     [SerializeField] PannelArray pannelArray;
     [SerializeField] DirectionPanel directionPanel;
     [SerializeField] Image statePanel;
+    [SerializeField] Text statePanelText;
     [SerializeField] Button testButton;
     [SerializeField] Button saveButton;
     [SerializeField] DamageSerialSend damageSerialSend;
@@ -28,6 +34,7 @@ public class MakePattern : MonoBehaviour {
         pattern = new Pattern();
         sampleState = 0;
         sampleTimer = new Timer();
+        statePanelText.text = STATE_PANEL_MESSAGE[0];
 
         testButton.onClick.AddListener(() =>
         {
@@ -71,12 +78,14 @@ public class MakePattern : MonoBehaviour {
 
     void StartSample () {
         if (sampleState == 0) {
-            sampleState = 1;
+            SetSampleState(1);
             statePanel.color = Color.yellow;
             pannelArray.ResetPattern();
             return;
-        } else if (sampleState == 1) {
-            sampleState = 2;
+        }
+        else if (sampleState == 1)
+        {
+            SetSampleState(2);
             patternArray = new int[Pattern.RANGE];
             counter = 0;
             sampleTimer.ExpiredReset();
@@ -93,10 +102,16 @@ public class MakePattern : MonoBehaviour {
         counter++;
         if (counter == Pattern.RANGE) {
             PrintPattern();
-            sampleState = 0;
+            SetSampleState(0);
             return;
         }
         sampleTimer.Start(Pattern.INTERVAL);
+    }
+
+    void SetSampleState(int s) {
+        sampleState = s;
+        pannelArray.editable = (sampleState == 0);
+        statePanelText.text = STATE_PANEL_MESSAGE[s];
     }
 
     void PrintPattern()

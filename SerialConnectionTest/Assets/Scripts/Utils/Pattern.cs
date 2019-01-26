@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Pattern {
 
-    public const float INTERVAL = 0.1f;
-    public const int RANGE = 16;
+    public const float INTERVAL = 0.03f;
+    public const int RANGE = 32;
     const string DEFAULT_KEY = "default";
-    const string FILENAME = @"Assets/Resources/pattern.csv";
+    readonly string FILENAME = @"Assets/Resources/pattern" + RANGE + ".csv";
 
     IDictionary<string, int[]> patternMap;
 
@@ -78,6 +78,11 @@ public class Pattern {
         {
             Debug.Log(e.Message);
         }
+        if (patternMap.ContainsKey(DEFAULT_KEY)) {
+            patternMap[DEFAULT_KEY] = GetDefaultPattern();
+        } else {
+            patternMap.Add(DEFAULT_KEY, GetDefaultPattern());
+        }
     }
 
     void WritePattern()
@@ -107,5 +112,12 @@ public class Pattern {
         else
             patternMap.Add(key, patternArray);
         WritePattern();
+    }
+
+    int[] GetDefaultPattern() {
+        int[] res = new int[RANGE];
+        for (int i = 0; i < RANGE; i++)
+            res[i] = 1;
+        return res;
     }
 }
