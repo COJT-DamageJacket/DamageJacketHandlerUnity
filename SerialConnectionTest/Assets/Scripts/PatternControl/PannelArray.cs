@@ -9,7 +9,7 @@ public class PannelArray : MonoBehaviour {
     [SerializeField] GameObject buttonPrefab;
 
     Button[] panels;
-    int[] pattern;
+    public int[] pattern;
     public bool editable;
 
 	// Use this for initialization

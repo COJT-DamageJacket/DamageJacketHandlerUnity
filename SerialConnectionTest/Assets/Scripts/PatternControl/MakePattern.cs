@@ -39,7 +39,7 @@ public class MakePattern : MonoBehaviour {
         testButton.onClick.AddListener(() =>
         {
             if (sampleState == 0 && patternArray != null)
-                damageSerialSend.SendDamage(directionPanel.direction, patternArray);
+                damageSerialSend.SendDamage(directionPanel.direction, GetPatternArray());
         });
 
         saveButton.onClick.AddListener(() =>
@@ -134,4 +134,7 @@ public class MakePattern : MonoBehaviour {
         Debug.Log(res);
     }
 
+    int[] GetPatternArray() {
+        return patternArray = pannelArray.pattern;
+    }
 }
