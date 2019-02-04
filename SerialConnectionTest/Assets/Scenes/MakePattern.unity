@@ -569,6 +569,7 @@ GameObject:
   - component: {fileID: 724272575}
   - component: {fileID: 724272579}
   - component: {fileID: 724272581}
+  - component: {fileID: 724272580}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -678,6 +679,18 @@ MonoBehaviour:
   damageSerialSend: {fileID: 724272581}
   patternNameField: {fileID: 807997494}
   searchButton: {fileID: 1002651083}
+--- !u!114 &724272580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724272574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835f67b694ae7494388c085bcc451f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portName: /dev/tty.usbmodem14111
 --- !u!114 &724272581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28468641050a6434e98382773b3b73bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: /dev/tty.usbmodem1411
+  serialHandler: {fileID: 724272580}
 --- !u!1 &735328543
 GameObject:
   m_ObjectHideFlags: 0
