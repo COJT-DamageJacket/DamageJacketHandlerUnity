@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageSerialSend : MonoBehaviour {
-
-    [SerializeField] SerialHandler serialHandler;
+public class DamageSerialSend : SerialHandler {
 
     const byte FRONT = 0b00000101; // 0, 1
     const byte RIGHT = 0b00001100; // 1, 2
@@ -28,8 +26,7 @@ public class DamageSerialSend : MonoBehaviour {
     void Start () {
         pattern = new Pattern();
 
-        if (serialHandler != null)
-            serialHandler.OnDataReceived += ReadMessage;
+        OnDataReceived += ReadMessage;
 
         sendTimer = new Timer();
         sendIndex = -1;
@@ -50,7 +47,7 @@ public class DamageSerialSend : MonoBehaviour {
     }
 
     public void DeadDamage() {
-        serialHandler.WriteByte(DEAD);
+        WriteByte(DEAD);
     }
 
     public void SendDamage(int position, int[] pattern)
@@ -79,9 +76,26 @@ public class DamageSerialSend : MonoBehaviour {
         }
     }
 
+    public void SendDamage(int position, string key, int count)
+    {
+        if (!isSending)
+        {
+            Debug.Log(key);
+            this.position = position;
+            this.patternArray = pattern.Get(key);
+            sendIndex = 0;
+            isSending = true;
+            _send(count);
+        }
+    }
+
     private void _send() {
+        _send(1);
+    }
+
+    private void _send(int count) {
         Debug.Log(patternArray[sendIndex] * DIRECTION[position]);
-        serialHandler.WriteByte(patternArray[sendIndex] * DIRECTION[position]);
+        WriteByte(patternArray[sendIndex] * DIRECTION[position]);
         sendIndex++;
 
         sendTimer.ExpiredReset();
@@ -90,15 +104,24 @@ public class DamageSerialSend : MonoBehaviour {
             // hasSend = false;
             sendTimer.expire += () =>
             {
-                serialHandler.WriteByte(0);
-                isSending = false;
+                Debug.Log("count : " + count);
+                if (count == 1)
+                {
+                    WriteByte(0);
+                    isSending = false;
+                }
+                else
+                {
+                    sendIndex = 0;
+                    _send(count - 1);
+                }
             };
         }
         else
         {
             sendTimer.expire += () =>
             {
-                _send();
+                _send(count);
             };
         }
         sendTimer.Start(Pattern.INTERVAL);
