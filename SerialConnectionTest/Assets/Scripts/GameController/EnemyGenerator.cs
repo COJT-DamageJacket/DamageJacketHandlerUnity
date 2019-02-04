@@ -25,7 +25,7 @@ public class EnemyGenerator : MonoBehaviour {
 
     void EnemyAppears() {
         count = 0;
-        float theta = 0; // 360 * Random.value;
+        float theta = 360 * Random.value;
         float t = theta / 180 * Mathf.PI;
         Vector3 pos = new Vector3(Mathf.Sin(t), 0, Mathf.Cos(t)) * RADIUS;
         GameObject prefab = (GameObject)Resources.Load("Prefabs/EnemyUnityChan");
