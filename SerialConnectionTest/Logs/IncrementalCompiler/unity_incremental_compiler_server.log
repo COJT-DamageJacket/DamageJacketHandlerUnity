@@ -1,69 +1,115 @@
  (0,0): Unity incremental compiler server
- (0,0): watchdog active on pid: 80105
- (0,0): [01/27/2019 04:15:07.870 午前] UnityEditor.StandardEvents.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:07.896 午前] UnityEditor.StandardEvents.dll compiling...
- (0,0): [01/27/2019 04:15:07.898 午前] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:07.909 午前] Unity.PackageManagerUI.Editor.dll compiling...
- (0,0): [01/27/2019 04:15:07.924 午前] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:07.936 午前] Unity.TextMeshPro.dll compiling...
- (0,0): [01/27/2019 04:15:10.744 午前] UnityEditor.StandardEvents.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/UnityEditor.StandardEvents.dll
- (0,0): [01/27/2019 04:15:10.813 午前] Unity.PackageManagerUI.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.PackageManagerUI.Editor.dll
- (0,0): [01/27/2019 04:15:10.899 午前] Unity.PackageManagerUI.Editor.dll compilation finished in 2989ms  source files re-parsed: 44 metadata reloaded: 190
- (0,0): [01/27/2019 04:15:10.899 午前] UnityEditor.StandardEvents.dll compilation finished in 3002ms  source files re-parsed: 1 metadata reloaded: 77
- (0,0): [01/27/2019 04:15:11.258 午前] Unity.TextMeshPro.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.dll
- (0,0): [01/27/2019 04:15:11.278 午前] Unity.TextMeshPro.dll compilation finished in 3342ms  source files re-parsed: 45 metadata reloaded: 166
- (0,0): [01/27/2019 04:15:11.612 午前] Unity.TextMeshPro.Editor.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:11.623 午前] Unity.TextMeshPro.Editor.dll compiling...
- (0,0): [01/27/2019 04:15:12.042 午前] Unity.TextMeshPro.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.Editor.dll
- (0,0): [01/27/2019 04:15:12.057 午前] Unity.TextMeshPro.Editor.dll compilation finished in 433ms  source files re-parsed: 39 metadata reloaded: 1
- (0,0): [01/27/2019 04:15:12.318 午前] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:12.329 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:15:12.535 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:15:12.561 午前] Assembly-CSharp.dll compilation finished in 231ms  source files re-parsed: 55 metadata reloaded: 3
- (0,0): [01/27/2019 04:15:13.429 午前] Assembly-CSharp-Editor.dll: no prior compilation found in cache
- (0,0): [01/27/2019 04:15:13.441 午前] Assembly-CSharp-Editor.dll compiling...
- (0,0): [01/27/2019 04:15:13.662 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
- (0,0): [01/27/2019 04:15:13.678 午前] Assembly-CSharp-Editor.dll compilation finished in 236ms  source files re-parsed: 12 metadata reloaded: 5
- (0,0): [01/27/2019 04:20:11.969 午前] Compiler cache size is now 14.70 MB
- (0,0): [01/27/2019 04:22:42.738 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:22:42.886 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:22:42.898 午前] Assembly-CSharp.dll compilation finished in 160ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [01/27/2019 04:22:42.910 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [01/27/2019 04:23:12.751 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:23:12.848 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:23:12.859 午前] Assembly-CSharp.dll compilation finished in 108ms  source files re-parsed: 2 metadata reloaded: 0
- (0,0): [01/27/2019 04:23:12.871 午前] Assembly-CSharp.dll: compilation was cached, 2 file(s) were found to have changed.
- (0,0): [01/27/2019 04:23:20.714 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:23:20.893 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:23:20.907 午前] Assembly-CSharp.dll compilation finished in 193ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [01/27/2019 04:23:20.918 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [01/27/2019 04:23:21.262 午前] Assembly-CSharp-Editor.dll compiling...
- (0,0): [01/27/2019 04:23:21.441 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
- (0,0): [01/27/2019 04:23:21.457 午前] Assembly-CSharp-Editor.dll compilation finished in 194ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [01/27/2019 04:23:21.468 午前] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [01/27/2019 04:25:19.800 午前] Compiler cache size is now 14.70 MB
- (0,0): [01/27/2019 04:35:29.756 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:35:29.917 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:35:29.933 午前] Assembly-CSharp.dll compilation finished in 176ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [01/27/2019 04:35:29.943 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [01/27/2019 04:35:30.290 午前] Assembly-CSharp-Editor.dll compiling...
- (0,0): [01/27/2019 04:35:30.493 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
- (0,0): [01/27/2019 04:35:30.509 午前] Assembly-CSharp-Editor.dll compilation finished in 219ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [01/27/2019 04:35:30.520 午前] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [01/27/2019 04:35:36.336 午前] Compiler cache size is now 14.70 MB
- (0,0): [01/27/2019 04:39:13.591 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:39:13.694 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:39:13.709 午前] Assembly-CSharp.dll compilation finished in 117ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [01/27/2019 04:39:13.720 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [01/27/2019 04:39:14.116 午前] Assembly-CSharp-Editor.dll compiling...
- (0,0): [01/27/2019 04:39:14.307 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
- (0,0): [01/27/2019 04:39:14.323 午前] Assembly-CSharp-Editor.dll compilation finished in 207ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [01/27/2019 04:39:14.335 午前] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [01/27/2019 04:39:35.235 午前] Assembly-CSharp.dll compiling...
- (0,0): [01/27/2019 04:39:35.351 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
- (0,0): [01/27/2019 04:39:35.366 午前] Assembly-CSharp.dll compilation finished in 131ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [01/27/2019 04:39:35.378 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [01/27/2019 04:39:35.758 午前] Assembly-CSharp-Editor.dll compiling...
- (0,0): [01/27/2019 04:39:35.927 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
- (0,0): [01/27/2019 04:39:35.941 午前] Assembly-CSharp-Editor.dll compilation finished in 182ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [01/27/2019 04:39:35.952 午前] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): watchdog active on pid: 79242
+ (0,0): [02/04/2019 07:48:26.395 午前] Unity.TextMeshPro.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:26.420 午前] UnityEditor.StandardEvents.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:26.421 午前] Unity.TextMeshPro.dll compiling...
+ (0,0): [02/04/2019 07:48:26.431 午前] UnityEditor.StandardEvents.dll compiling...
+ (0,0): [02/04/2019 07:48:26.446 午前] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:26.457 午前] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [02/04/2019 07:48:30.027 午前] Unity.PackageManagerUI.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.PackageManagerUI.Editor.dll
+ (0,0): [02/04/2019 07:48:30.027 午前] UnityEditor.StandardEvents.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/UnityEditor.StandardEvents.dll
+ (0,0): [02/04/2019 07:48:30.093 午前] Unity.PackageManagerUI.Editor.dll compilation finished in 3636ms  source files re-parsed: 44 metadata reloaded: 199
+ (0,0): [02/04/2019 07:48:30.094 午前] UnityEditor.StandardEvents.dll compilation finished in 3662ms  source files re-parsed: 1 metadata reloaded: 192
+ (0,0): [02/04/2019 07:48:30.453 午前] Unity.TextMeshPro.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.dll
+ (0,0): [02/04/2019 07:48:30.470 午前] Unity.TextMeshPro.dll compilation finished in 4049ms  source files re-parsed: 45 metadata reloaded: 196
+ (0,0): [02/04/2019 07:48:30.867 午前] Unity.TextMeshPro.Editor.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:30.879 午前] Unity.TextMeshPro.Editor.dll compiling...
+ (0,0): [02/04/2019 07:48:31.244 午前] Unity.TextMeshPro.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.Editor.dll
+ (0,0): [02/04/2019 07:48:31.259 午前] Unity.TextMeshPro.Editor.dll compilation finished in 380ms  source files re-parsed: 39 metadata reloaded: 1
+ (0,0): [02/04/2019 07:48:31.572 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:31.582 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 07:48:31.785 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 07:48:31.812 午前] Assembly-CSharp.dll compilation finished in 229ms  source files re-parsed: 56 metadata reloaded: 3
+ (0,0): [02/04/2019 07:48:32.552 午前] Assembly-CSharp-Editor.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 07:48:32.563 午前] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [02/04/2019 07:48:32.749 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [02/04/2019 07:48:32.766 午前] Assembly-CSharp-Editor.dll compilation finished in 203ms  source files re-parsed: 12 metadata reloaded: 5
+ (0,0): [02/04/2019 07:58:03.787 午前] Compiler cache size is now 14.70 MB
+ (0,0): [02/04/2019 08:07:02.901 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:07:02.914 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:07:03.074 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:07:03.102 午前] Assembly-CSharp.dll compilation finished in 188ms  source files re-parsed: 59 metadata reloaded: 0
+ (0,0): [02/04/2019 08:08:55.585 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:08:55.596 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:08:55.704 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:08:55.721 午前] Assembly-CSharp.dll compilation finished in 125ms  source files re-parsed: 59 metadata reloaded: 0
+ (0,0): [02/04/2019 08:09:09.780 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:09:09.792 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:09:09.874 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:09:09.890 午前] Assembly-CSharp.dll compilation finished in 98ms  source files re-parsed: 59 metadata reloaded: 0
+ (0,0): [02/04/2019 08:09:45.902 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:09:45.997 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:09:46.015 午前] Assembly-CSharp.dll compilation finished in 112ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [02/04/2019 08:09:46.026 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:13:07.920 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:13:08.004 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:13:08.019 午前] Assembly-CSharp.dll compilation finished in 99ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [02/04/2019 08:13:08.031 午前] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:06.840 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:14:06.851 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:14:06.950 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:14:06.968 午前] Assembly-CSharp.dll compilation finished in 116ms  source files re-parsed: 59 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:17.190 午前] Unity.TextMeshPro.dll compiling...
+ (0,0): [02/04/2019 08:14:17.294 午前] UnityEditor.StandardEvents.dll compiling...
+ (0,0): [02/04/2019 08:14:17.329 午前] UnityEditor.StandardEvents.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/UnityEditor.StandardEvents.dll
+ (0,0): [02/04/2019 08:14:17.346 午前] UnityEditor.StandardEvents.dll compilation finished in 51ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:17.357 午前] UnityEditor.StandardEvents.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:17.392 午前] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:17.618 午前] Unity.PackageManagerUI.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.PackageManagerUI.Editor.dll
+ (0,0): [02/04/2019 08:14:17.635 午前] Unity.PackageManagerUI.Editor.dll compilation finished in 242ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:17.646 午前] Unity.PackageManagerUI.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:17.836 午前] Unity.TextMeshPro.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.dll
+ (0,0): [02/04/2019 08:14:17.853 午前] Unity.TextMeshPro.dll compilation finished in 662ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:17.864 午前] Unity.TextMeshPro.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:18.306 午前] Unity.TextMeshPro.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:18.596 午前] Unity.TextMeshPro.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.Editor.dll
+ (0,0): [02/04/2019 08:14:18.612 午前] Unity.TextMeshPro.Editor.dll compilation finished in 306ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [02/04/2019 08:14:18.624 午前] Unity.TextMeshPro.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:18.811 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:14:18.822 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:14:18.919 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:14:18.934 午前] Assembly-CSharp.dll compilation finished in 111ms  source files re-parsed: 58 metadata reloaded: 3
+ (0,0): [02/04/2019 08:14:32.240 午前] Unity.TextMeshPro.dll compiling...
+ (0,0): [02/04/2019 08:14:32.306 午前] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:32.437 午前] UnityEditor.StandardEvents.dll compiling...
+ (0,0): [02/04/2019 08:14:32.472 午前] UnityEditor.StandardEvents.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/UnityEditor.StandardEvents.dll
+ (0,0): [02/04/2019 08:14:32.486 午前] UnityEditor.StandardEvents.dll compilation finished in 48ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:32.496 午前] UnityEditor.StandardEvents.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:32.689 午前] Unity.PackageManagerUI.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.PackageManagerUI.Editor.dll
+ (0,0): [02/04/2019 08:14:32.703 午前] Unity.PackageManagerUI.Editor.dll compilation finished in 396ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:32.714 午前] Unity.PackageManagerUI.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:32.868 午前] Unity.TextMeshPro.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.dll
+ (0,0): [02/04/2019 08:14:32.885 午前] Unity.TextMeshPro.dll compilation finished in 644ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:32.897 午前] Unity.TextMeshPro.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:33.114 午前] Unity.TextMeshPro.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:33.391 午前] Unity.TextMeshPro.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.Editor.dll
+ (0,0): [02/04/2019 08:14:33.408 午前] Unity.TextMeshPro.Editor.dll compilation finished in 294ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [02/04/2019 08:14:33.418 午前] Unity.TextMeshPro.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:33.629 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:14:33.641 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:14:33.727 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:14:33.740 午前] Assembly-CSharp.dll compilation finished in 99ms  source files re-parsed: 57 metadata reloaded: 3
+ (0,0): [02/04/2019 08:14:41.790 午前] Unity.TextMeshPro.dll compiling...
+ (0,0): [02/04/2019 08:14:41.891 午前] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:42.007 午前] UnityEditor.StandardEvents.dll compiling...
+ (0,0): [02/04/2019 08:14:42.051 午前] UnityEditor.StandardEvents.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/UnityEditor.StandardEvents.dll
+ (0,0): [02/04/2019 08:14:42.101 午前] UnityEditor.StandardEvents.dll compilation finished in 93ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:42.121 午前] UnityEditor.StandardEvents.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:42.188 午前] Unity.PackageManagerUI.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.PackageManagerUI.Editor.dll
+ (0,0): [02/04/2019 08:14:42.203 午前] Unity.PackageManagerUI.Editor.dll compilation finished in 312ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:42.216 午前] Unity.PackageManagerUI.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:42.386 午前] Unity.TextMeshPro.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.dll
+ (0,0): [02/04/2019 08:14:42.403 午前] Unity.TextMeshPro.dll compilation finished in 613ms  source files re-parsed: 0 metadata reloaded: 0
+ (0,0): [02/04/2019 08:14:42.415 午前] Unity.TextMeshPro.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:42.697 午前] Unity.TextMeshPro.Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:42.945 午前] Unity.TextMeshPro.Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Unity.TextMeshPro.Editor.dll
+ (0,0): [02/04/2019 08:14:42.960 午前] Unity.TextMeshPro.Editor.dll compilation finished in 263ms  source files re-parsed: 0 metadata reloaded: 1
+ (0,0): [02/04/2019 08:14:42.972 午前] Unity.TextMeshPro.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
+ (0,0): [02/04/2019 08:14:43.233 午前] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [02/04/2019 08:14:43.244 午前] Assembly-CSharp.dll compiling...
+ (0,0): [02/04/2019 08:14:43.364 午前] Assembly-CSharp.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp.dll
+ (0,0): [02/04/2019 08:14:43.378 午前] Assembly-CSharp.dll compilation finished in 134ms  source files re-parsed: 56 metadata reloaded: 3
+ (0,0): [02/04/2019 08:14:44.331 午前] Assembly-CSharp-Editor.dll compiling...
+ (0,0): [02/04/2019 08:14:44.544 午前] Assembly-CSharp-Editor.dll: emitting IL to : /Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Temp/Assembly-CSharp-Editor.dll
+ (0,0): [02/04/2019 08:14:44.559 午前] Assembly-CSharp-Editor.dll compilation finished in 227ms  source files re-parsed: 0 metadata reloaded: 2
+ (0,0): [02/04/2019 08:14:44.570 午前] Assembly-CSharp-Editor.dll: compilation was cached, 0 file(s) were found to have changed.

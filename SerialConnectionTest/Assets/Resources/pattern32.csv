@@ -1,2 +1,5 @@
 default,ffffffff
 pattern1,ff01c3e7
+new_type,aaaaaaaa
+heart,f8300000
+accel,fffffffe
