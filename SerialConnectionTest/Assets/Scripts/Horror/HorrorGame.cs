@@ -17,6 +17,7 @@ public class HorrorGame : MonoBehaviour {
     [SerializeField] AudioClip audioClip5;
     [SerializeField] AudioClip audioClip6;
 
+    [SerializeField] Vector2 pos;
     private AudioClip[] audioClips = new AudioClip[N];
 
     private int idx;
@@ -32,6 +33,9 @@ public class HorrorGame : MonoBehaviour {
         "手に血がべっとりついていた"
     };
     private AudioSource[] sources;
+    Vector2 dis = new Vector2();
+    const float RATE1 = 1.4f;
+    const float RATE2 = 2.6f;
 
     void Next() {
         idx++;
@@ -42,13 +46,29 @@ public class HorrorGame : MonoBehaviour {
         { // 心臓音
             damageSerialSend.SendDamage(0, "heart", 4);
         }
+        if (idx == 3)
+        {
+            image.GetComponent<RectTransform>().localScale = RATE1 * new Vector2(1, 1);
+            image.GetComponent<RectTransform>().localPosition = RATE1 * new Vector2(1, 1) + new Vector2(60, 70);
+        }
         else if (idx == 4)
         {
+            image.GetComponent<RectTransform>().localScale = RATE2 * new Vector2(1, 1);
+            image.GetComponent<RectTransform>().localPosition = RATE1 * new Vector2(1, 1) + new Vector2(250, 120);
             damageSerialSend.SendDamage(2, "accel");
+        }
+        else if (idx == 5)
+        {
+            image.gameObject.SetActive(false);
         }
         else if (idx == 6)
         {
             damageSerialSend.SendDamage(4, "kya---", 2);
+            Sprite sprite = Resources.Load<Sprite>("hand");
+            image.gameObject.SetActive(true);
+            image.sprite = sprite;
+            image.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+            image.GetComponent<RectTransform>().localPosition = new Vector2(0, 50);
         }
 
         audioSource.PlayOneShot(audioClips[idx]);
@@ -59,7 +79,7 @@ public class HorrorGame : MonoBehaviour {
         idx = -1;
         Next();
 
-        Sprite sprite = Resources.Load<Sprite>("0001");
+        Sprite sprite = Resources.Load<Sprite>("tunnel");
         image.sprite = sprite;
 
         audioClips[0] = audioClip0;
@@ -71,13 +91,14 @@ public class HorrorGame : MonoBehaviour {
         audioClips[6] = audioClip6;
         audioSource.PlayOneShot(audioClips[idx]);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && audioSource.time == 0)
         {
             Next();
         }
+        pos = image.GetComponent<RectTransform>().localPosition;
     }
 }

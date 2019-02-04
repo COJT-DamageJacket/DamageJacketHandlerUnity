@@ -6,11 +6,6 @@
 -nostdlib
 -unsafe
 -r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Assembly-CSharp.dll"
--r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Assembly-UnityScript.dll"
--r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
--r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
--r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
--r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
 -r:"/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll"
 -r:"/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -74,6 +69,11 @@
 -r:"/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"/Applications/Unity.app/Contents/Managed/UnityEditor.dll"
 -r:"/Applications/Unity.app/Contents/Managed/Unity.Locator.dll"
+-r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Assembly-UnityScript.dll"
+-r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
+-r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
+-r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
+-r:"/Users/ktomoya/rep/code/cojt/DamageJacketHandlerUnity/SerialConnectionTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
 -r:"/Applications/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"/Applications/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 -r:"/Applications/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
