@@ -7,6 +7,7 @@ public class HorrorGame : MonoBehaviour {
 
     [SerializeField] Text text;
     [SerializeField] Image image;
+    [SerializeField] GameObject title;
     [SerializeField] DamageSerialSend damageSerialSend;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip audioClip0;
@@ -17,8 +18,8 @@ public class HorrorGame : MonoBehaviour {
     [SerializeField] AudioClip audioClip5;
     [SerializeField] AudioClip audioClip6;
 
-    [SerializeField] Vector2 pos;
     private AudioClip[] audioClips = new AudioClip[N];
+    bool isPlaying;
 
     private int idx;
     const int N = 7;
@@ -39,6 +40,10 @@ public class HorrorGame : MonoBehaviour {
 
     void Next() {
         idx++;
+        if (idx == -1) {
+            return;
+        }
+        title.SetActive(false);
         if (idx >= N) return;
         text.text = story[idx];
 
@@ -76,7 +81,7 @@ public class HorrorGame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        idx = -1;
+        idx = -2;
         Next();
 
         Sprite sprite = Resources.Load<Sprite>("tunnel");
@@ -89,16 +94,16 @@ public class HorrorGame : MonoBehaviour {
         audioClips[4] = audioClip4;
         audioClips[5] = audioClip5;
         audioClips[6] = audioClip6;
-        audioSource.PlayOneShot(audioClips[idx]);
+
+        isPlaying = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && audioSource.time == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && (!audioSource.isPlaying || idx == -1))
         {
             Next();
         }
-        pos = image.GetComponent<RectTransform>().localPosition;
     }
 }
