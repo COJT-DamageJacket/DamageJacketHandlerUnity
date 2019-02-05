@@ -15,10 +15,17 @@ public class UnityChanShooter : MonoBehaviour {
     [SerializeField] private DamageSerialSend damageSerialSend;
     [SerializeField] string key;
 
+    AudioSource audio;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip damageSound;
+    [SerializeField] AudioClip deadSound;
+
     // Use this for initialization
     void Start () {
         trans = transform;
         hp = 100; // TODO : 定数を扱うクラスをつくる
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -67,10 +74,13 @@ public class UnityChanShooter : MonoBehaviour {
             launchTimer = new Timer();
             launchTimer.expire += () => { bullet.GetComponent<Bullet>().SetVelocity(theta+90); launchTimer = null; };
             launchTimer.Start(0.1f);
+
+            audio.clip = attackSound;
+            audio.PlayOneShot(attackSound);
         }
     }
 
-    private void damage(int d, float angle)
+    private void Damage(int d, float angle)
     {
         int pos = 0;
         if (angle >= 90 && angle < 180) pos = 1;
@@ -80,12 +90,19 @@ public class UnityChanShooter : MonoBehaviour {
         {
             hp = 0;
             damageSerialSend.DeadDamage();
+
+            audio.clip = deadSound;
+            audio.PlayOneShot(deadSound);
         }
         else if (hp > d)
         {
             hp -= d;
             damageSerialSend.SendDamage(pos, key);
+
+            audio.clip = damageSound;
+            audio.PlayOneShot(damageSound);
         }
+
     }
 
     public int getHp()
@@ -101,7 +118,7 @@ public class UnityChanShooter : MonoBehaviour {
             Vector3 pos = other.gameObject.GetComponent<Rigidbody>().position;
             Destroy(other.gameObject);
             float angle = (((Mathf.Atan2(pos.z, pos.x) * 180 / Mathf.PI - theta - 45) % 360 + 360) %360);
-            damage(8, angle); // TODO :
+            Damage(8, angle); // TODO :
         }
     }
 }

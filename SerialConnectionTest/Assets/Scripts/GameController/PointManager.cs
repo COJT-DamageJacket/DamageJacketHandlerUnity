@@ -5,10 +5,12 @@ using UnityEngine;
 public class PointManager : MonoBehaviour {
 
     private int point;
+    AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
         point = 0;
+        audioSource = GetComponents<AudioSource>()[0];
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,7 @@ public class PointManager : MonoBehaviour {
 
     public void add(int p) {
         point += p;
+        audioSource.PlayOneShot(audioSource.clip);
     }
 
     public int get() {
