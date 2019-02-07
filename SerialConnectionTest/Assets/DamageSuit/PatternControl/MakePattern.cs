@@ -27,6 +27,7 @@ public class MakePattern : MonoBehaviour {
     [SerializeField] DamageSerialSend damageSerialSend;
     [SerializeField] InputField patternNameField;
     [SerializeField] Button searchButton;
+    [SerializeField] Button dead;
 
 
     // Use this for initialization
@@ -58,9 +59,16 @@ public class MakePattern : MonoBehaviour {
                 pannelArray.SetPattern(patternArray);
             }
         });
+
+
+        dead.onClick.AddListener(() =>
+        {
+            damageSerialSend.DeadDamage();
+        });
 	}
 
 
+   
     // Update is called once per frame
     void Update () {
         state = Input.GetKey(KeyCode.Space);

@@ -592,7 +592,7 @@ Prefab:
     - target: {fileID: 114983209071551792, guid: 4a20fc5d7e9ab4adbb6101964045dfe5,
         type: 2}
       propertyPath: portName
-      value: /dev/tty.usbmodem1411
+      value: /dev/tty.usbmodem14111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a20fc5d7e9ab4adbb6101964045dfe5, type: 2}
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theta: 0
   damageSerialSend: {fileID: 1612663321}
-  key: default
+  key: test3
   attackSound: {fileID: 8300000, guid: 30a1dc37ce21e4a09bb734fafabbffd0, type: 3}
   damageSound: {fileID: 8300000, guid: 25070f3ed1f0a4dea94e4e79a4551e69, type: 3}
   deadSound: {fileID: 8300000, guid: 5fe874760022d4428bd596891eb484ed, type: 3}

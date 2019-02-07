@@ -1753,7 +1753,7 @@ Prefab:
     - target: {fileID: 114983209071551792, guid: 4a20fc5d7e9ab4adbb6101964045dfe5,
         type: 2}
       propertyPath: portName
-      value: /dev/tty.usbmodem1411
+      value: /dev/tty.usbmodem14111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a20fc5d7e9ab4adbb6101964045dfe5, type: 2}

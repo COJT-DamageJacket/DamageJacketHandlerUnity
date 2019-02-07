@@ -25,11 +25,11 @@ public class HorrorGame : MonoBehaviour {
     const int N = 7;
 
     readonly string[] story = {
-        "いわくつきのトンネルに友達とドライブしに行った。",
+        "いわくつきのトンネルに友達とドライブしに行った",
         "何もないと思っていたら急に友達が苦しみだした。",
-        "ボクもなんだか息が苦しい",
+        "オレもなんだか息が苦しい",
         "早くトンネルを出ないと！",
-        "車を一気に加速させた",
+        "オレはアクセルをふんだ",
         "トンネルを過ぎて一安心したと思ったら",
         "手に血がべっとりついていた"
     };
@@ -49,7 +49,7 @@ public class HorrorGame : MonoBehaviour {
 
         if (idx == 2 || idx == 3)
         { // 心臓音
-            damageSerialSend.SendDamage(0, "heart", 4);
+            damageSerialSend.SendDamage(0, "heart", 2);
         }
         if (idx == 3)
         {
@@ -69,7 +69,7 @@ public class HorrorGame : MonoBehaviour {
         else if (idx == 6)
         {
             damageSerialSend.SendDamage(4, "kya---", 2);
-            Sprite sprite = Resources.Load<Sprite>("hand");
+            Sprite sprite = Resources.Load<Sprite>("Images/hand");
             image.gameObject.SetActive(true);
             image.sprite = sprite;
             image.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
@@ -84,7 +84,7 @@ public class HorrorGame : MonoBehaviour {
         idx = -2;
         Next();
 
-        Sprite sprite = Resources.Load<Sprite>("tunnel");
+        Sprite sprite = Resources.Load<Sprite>("Images/tunnel");
         image.sprite = sprite;
 
         audioClips[0] = audioClip0;
