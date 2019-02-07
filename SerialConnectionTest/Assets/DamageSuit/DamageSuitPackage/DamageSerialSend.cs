@@ -18,6 +18,7 @@ public class DamageSerialSend : SerialHandler {
     private int[] patternArray;
 
     Timer sendTimer;
+    Timer resetTimer;
 
     private int sendIndex;
     private bool isSending;
@@ -29,6 +30,16 @@ public class DamageSerialSend : SerialHandler {
         OnDataReceived += ReadMessage;
 
         sendTimer = new Timer();
+        resetTimer = new Timer();
+        resetTimer.expire += () =>
+        {
+            if (!isSending)
+            {
+                WriteByte(0);
+            }
+            resetTimer.Start(1);
+        };
+        resetTimer.Start(1);
         sendIndex = -1;
 
         isSending = false;
@@ -38,6 +49,9 @@ public class DamageSerialSend : SerialHandler {
 	void Update () {
         if (sendTimer != null) {
             sendTimer.UpdateTime(Time.deltaTime);
+        }
+        if (resetTimer != null) {
+            resetTimer.UpdateTime(Time.deltaTime);
         }
 	}
 
@@ -93,27 +107,26 @@ public class DamageSerialSend : SerialHandler {
         _send(1);
     }
 
-    private void _send(int count) {
-        Debug.Log(patternArray[sendIndex] * DIRECTION[position]);
+    void _send(int count)
+    {
         WriteByte(patternArray[sendIndex] * DIRECTION[position]);
         sendIndex++;
 
         sendTimer.ExpiredReset();
         if (sendIndex == Pattern.RANGE)
         {
-            // hasSend = false;
             sendTimer.expire += () =>
             {
-                Debug.Log("count : " + count);
-                if (count == 1)
+                count--;
+                if (count == 0)
                 {
-                    WriteByte(0);
+                    WriteByte(0); // 停止させる
                     isSending = false;
                 }
                 else
                 {
                     sendIndex = 0;
-                    _send(count - 1);
+                    _send(count);
                 }
             };
         }
