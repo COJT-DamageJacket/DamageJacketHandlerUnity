@@ -1,3 +1,5 @@
+pattern*.csvv
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -34,3 +36,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+*.png*
+*.mp3*
+*.csv*
+*.ttf*
